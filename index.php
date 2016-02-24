@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="banner">
+    <a href="#"><h6>Mormors kokbok</h6> </a>
+</div>
+<center>
+    <div class="meny">
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a>
+                </li>
+
+                <li><a href="#">Recept</a>
+                </li>
+
+                <li><a href="#">Mer recept</a>
+                </li>
+
+                <li><a href="#">Mat</a>
+                </li>
+
+                <li><a href="varukorg/index.php">Min kyl</a>
+                </li>
+
+                <li><a href="#">knapp3</a>
+                </li>
+                <?php
+                session_start();
+                include_once 'db/connect.php';
+
+                if(!isset($_SESSION['user']))
+                {
+                    header("Location: index.php");
+                }
+                $res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
+                $userRow=mysql_fetch_array($res);
+                ?>
+                <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+
+                    <title>Welcome - <?php echo $userRow['user_email']; ?></title>
+
+                    <div id="header">
+                        <div id="left">
+
+                        </div>
+                        <div id="right">
+                            <div id="content">
+                                hi <?php echo $userRow['user_name']; ?>&nbsp;<a href="login/logout.php?logout">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+</body>
+</html>
+            </ul>
+        </nav>
+</center>
+<center>
+    <div class="search">
+        <form action="http://www.recept.nu" method="">
+            <input type="text" name="search" placeholder="Enter Keyword" />
+            <input type="submit" value="Search" />
+            <div class="box">
+
+            </div>
+
+        </form>
+    </div>
+</center>
+<div class="fak">
+    <img src="img/kycklingburgare-med-currymayo-och-bacon.jpg">
+    <img src="img/stekt-tofu-med-gronsaker-och-kall-ortagardssas.jpg">
+    <img src="img/saffrans-och-konjakszabaione.jpg">
+    <img src="img/fiskgratang-med-rakor-2.jpg">
+</div>
+
+<footer>
+
+
+</footer>
+
+</body>
+
+</html>
+

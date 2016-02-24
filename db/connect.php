@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by Michael Ranstrand
+ * Date: 2015-03-06
+ */
+//Variabler för databaskoppling
+$dbhost     = "localhost";
+$dbname     = "te2l";
+$dbuser     = "root";
+$dbpass     = "";
+//Koppla till databasen
+$DBH = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
+// Välj felhantering (här felsökningsläge)
+$DBH->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+?>
+<?php
+error_reporting( E_ALL & ~E_DEPRECATED & ~E_NOTICE );
+if(!mysql_connect("localhost","root",""))
+{
+    die('oops connection problem ! --> '.mysql_error());
+}
+if(!mysql_select_db("te2l"))
+{
+    die('oops database selection problem ! --> '.mysql_error());
+}
+
+?>
