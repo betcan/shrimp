@@ -16,30 +16,30 @@ if(isset($_POST['btn-signup']))
 	$email = trim($email);
 	$upass = trim($upass);
 	
-	// email exist or not
+	// kollar om mailen finns eller inte
 	$query = "SELECT user_email FROM users WHERE user_email='$email'";
 	$result = mysql_query($query);
 	
-	$count = mysql_num_rows($result); // if email not found then register
+	$count = mysql_num_rows($result); //om mailen inte finns, registrera
 	
 	if($count == 0){
 		
 		if(mysql_query("INSERT INTO users(user_name,user_email,user_pass) VALUES('$uname','$email','$upass')"))
 		{
 			?>
-			<script>alert('successfully registered ');</script>
+			<script>alert('registrerad ');</script>
 			<?php
 		}
 		else
 		{
 			?>
-			<script>alert('error while registering you...');</script>
+			<script>alert('error när vi försökte registrera dig...');</script>
 			<?php
 		}		
 	}
 	else{
 			?>
-			<script>alert('Sorry Email ID already taken ...');</script>
+			<script>alert('Emailen används redan ...');</script>
 			<?php
 	}
 	
@@ -49,7 +49,7 @@ if(isset($_POST['btn-signup']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coding Cage - Login & Registration System</title>
+<title>Mormors kokbok - Registrering</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
@@ -59,19 +59,19 @@ if(isset($_POST['btn-signup']))
 <form method="post">
 <table align="center" width="30%" border="0">
 <tr>
-<td><input type="text" name="uname" placeholder="User Name" required /></td>
+<td><input type="text" name="uname" placeholder="Användarnamn" required /></td>
 </tr>
 <tr>
-<td><input type="email" name="email" placeholder="Your Email" required /></td>
+<td><input type="email" name="email" placeholder="Email" required /></td>
 </tr>
 <tr>
-<td><input type="password" name="pass" placeholder="Your Password" required /></td>
+<td><input type="password" name="pass" placeholder="Lösenord" required /></td>
 </tr>
 <tr>
-<td><button type="submit" name="btn-signup">Sign Me Up</button></td>
+<td><button type="submit" name="btn-signup">Registrera</button></td>
 </tr>
 <tr>
-<td><a href="index.php">Sign In Here</a></td>
+<td><a href="index.php">Logga in här!</a></td>
 </tr>
 </table>
 </form>

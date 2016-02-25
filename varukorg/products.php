@@ -43,7 +43,6 @@ if(isset($message)){
     <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Price</th>
         <th>Action</th>
     </tr>
 
@@ -58,7 +57,6 @@ if(isset($message)){
         <tr>
             <td><?php echo $row['name'] ?></td>
             <td><?php echo $row['description'] ?></td>
-            <td><?php echo $row['price'] ?>$</td>
             <td><a href="index.php?page=products&action=add&id=<?php echo $row['id_product'] ?>">Add to cart</a></td>
         </tr>
     <?php

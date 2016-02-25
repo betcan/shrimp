@@ -38,7 +38,7 @@ if(isset($_POST['btn-login']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Mormors kokbok - Login & Registrering</title>
+<title>Mormors kokbok - Login</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
@@ -50,7 +50,7 @@ if(isset($_POST['btn-login']))
 <td><input type="text" name="email" placeholder="Email" required /></td>
 </tr>
 <tr>
-<td><input type="password" name="pass" placeholder="Password" required /></td>
+<td><input type="password" name="pass" placeholder="Lösenord" required /></td>
 </tr>
 <tr>
 <td><button type="submit" name="btn-login">Logga in</button></td>

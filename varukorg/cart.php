@@ -23,8 +23,7 @@ if(isset($_POST['submit'])){
         <tr>
             <th>Name</th>
             <th>Quantity</th>
-            <th>Price</th>
-            <th>Items Price</th>
+
         </tr>
 
         <?php
@@ -37,24 +36,18 @@ if(isset($_POST['submit'])){
 
         $sql=substr($sql, 0, -1).") ORDER BY name ASC";
         $query=mysql_query($sql);
-        $totalprice=0;
         while($row=mysql_fetch_array($query)){
-            $subtotal=$_SESSION['cart'][$row['id_product']]['quantity']*$row['price'];
-            $totalprice+=$subtotal;
             ?>
             <tr>
                 <td><?php echo $row['name'] ?></td>
                 <td><input type="text" name="quantity[<?php echo $row['id_product'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['id_product']]['quantity'] ?>" /></td>
-                <td><?php echo $row['price'] ?>$</td>
-                <td><?php echo $_SESSION['cart'][$row['id_product']]['quantity']*$row['price'] ?>$</td>
+
             </tr>
         <?php
 
         }
         ?>
-        <tr>
-            <td colspan="4">Total Price: <?php echo $totalprice ?></td>
-        </tr>
+
 
     </table>
     <br />
