@@ -13,7 +13,7 @@ $userRow=mysql_fetch_array($res);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<title>Welcome - <?php echo $userRow['user_email']; ?></title>
+<title>Välkommen - <?php echo $userRow['user_email']; ?></title>
 
 <div id="header">
 	<div id="left">
@@ -21,7 +21,7 @@ $userRow=mysql_fetch_array($res);
     </div>
     <div id="right">
     	<div id="content">
-        	hi <?php echo $userRow['user_name']; ?>&nbsp;<a href="logout.php?logout">Sign Out</a>
+        	Hej <?php echo $userRow['user_name']; ?>&nbsp;<a href="logout.php?logout">Logga Out</a>
         </div>
     </div>
 </div>
