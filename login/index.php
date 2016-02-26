@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="banner">
+    <a href="#"><h6>Mormors kokbok</h6> </a>
+</div>
+</html>
+
 <?php
 session_start();
 include_once '../db/connect.php';

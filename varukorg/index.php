@@ -1,3 +1,30 @@
+<body>
+<div class="banner">
+    <a href="#"><h6>Mormors kokbok</h6> </a>
+</div>
+<center>
+    <div class="meny">
+        <nav>
+            <ul>
+                <li><a href="../index.php">Startsida</a>
+                </li>
+
+                <li><a href="#">Recept</a>
+                </li>
+
+                <li><a href="#">Mer recept</a>
+                </li>
+
+                <li><a href="#">Mat</a>
+                </li>
+
+                <li><a href="../varukorg/index.php">Min kyl</a>
+                </li>
+
+                <li><a href="#">knapp3</a>
+                </li>
+                </html>
+
 <?php
 session_start();
 require("includes/connection.php");
@@ -69,12 +96,12 @@ if(isset($_GET['page'])){
             }
             ?>
             <hr />
-            <a href="index.php?page=cart">Go to cart</a>
+            <a href="index.php?page=cart">Gå till kylen</a>
         <?php
 
         }else{
 
-            echo "<p>Your Cart is empty. Please add some products.</p>";
+            echo "<p>Kylen är tom, lägg till varor</p>";
 
         }
 

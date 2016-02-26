@@ -6,7 +6,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 
     if(isset($_SESSION['cart'][$id])){
 
-        $_SESSION['cart'][$id]['quantity']++;
+        $_SESSION['cart'][$id]['quantity'];
 
     }else{
 
@@ -18,7 +18,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 
             $_SESSION['cart'][$row_s['id_product']]=array(
                 "quantity" => 1,
-                "price" => $row_s['price']
+
             );
 
 
@@ -41,9 +41,8 @@ if(isset($message)){
 ?>
 <table>
     <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Action</th>
+        <th>Namn</th>
+        <th>Lägg till</th>
     </tr>
 
     <?php
@@ -56,8 +55,7 @@ if(isset($message)){
         ?>
         <tr>
             <td><?php echo $row['name'] ?></td>
-            <td><?php echo $row['description'] ?></td>
-            <td><a href="index.php?page=products&action=add&id=<?php echo $row['id_product'] ?>">Add to cart</a></td>
+            <td><a href="index.php?page=products&action=add&id=<?php echo $row['id_product'] ?>">Lägg till i min kyl</a></td>
         </tr>
     <?php
 

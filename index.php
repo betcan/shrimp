@@ -15,7 +15,7 @@
     <div class="meny">
         <nav>
             <ul>
-                <li><a href="index.html">Startsida</a>
+                <li><a href="index.php">Startsida</a>
                 </li>
 
                 <li><a href="#">Recept</a>
@@ -81,10 +81,10 @@
                         <div id="left">
 
                         </div>
-                        <div id="right">
-                            <div id="content">
-                                hi <?php echo $userRow['user_name']; ?>&nbsp;<a href="login/logout.php?logout">Sign Out</a>
-                            </div>
+
+                            <div class="login">
+                                hi <?php echo $userRow['user_name']; ?>&nbsp;<a class="loggout" href="login/logout.php?logout">Sign Out</a>
+
                         </div>
                     </div>
 

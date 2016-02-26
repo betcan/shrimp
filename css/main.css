@@ -69,3 +69,14 @@ img {
 .fuk {
     width: 85%;
 }
+.login {
+    position: absolute;
+    top: 18px;
+    left: 1258px;
+    color:white;
+    text-decoration: none;
+}
+.loggout {
+    text-decoration: none;
+
+}
