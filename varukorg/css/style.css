@@ -1,3 +1,17 @@
+.banner {
+    width: 95%;
+    padding-top: 2%;
+    padding-bottom: 2.7%;
+    background: #2D882D;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: center;
+}
+.banner a {
+    text-decoration: none;
+}
+
 body {
     font-family: Verdana;
     font-size: 12px;
@@ -62,6 +76,7 @@ h2 {font-size: 16px}
 .banner a {
     text-decoration: none;
 }
+
 h6 {
     font-size: 50px;
     margin: 0 auto;
@@ -109,7 +124,7 @@ img {
     margin-top: 3%;
 }
 .box {
-    height: 55px;
+    height: 205px;
     width: auto;
     background: #2D882D;
     margin-top: 15%;

@@ -1,3 +1,7 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
 <body>
 <div class="banner">
     <a href="#"><h6>Mormors kokbok</h6> </a>
@@ -9,19 +13,10 @@
                 <li><a href="../index.php">Startsida</a>
                 </li>
 
-                <li><a href="#">Recept</a>
-                </li>
-
-                <li><a href="#">Mer recept</a>
-                </li>
-
-                <li><a href="#">Mat</a>
+                <li><a href="../databas/index.php">Recept</a>
                 </li>
 
                 <li><a href="../varukorg/index.php">Min kyl</a>
-                </li>
-
-                <li><a href="#">knapp3</a>
                 </li>
                 </html>
 
@@ -58,7 +53,7 @@ if(isset($_GET['page'])){
     <link rel="stylesheet" href="css/style.css" />
 
 
-    <title>Shopping Cart</title>
+    <title>Varukorg</title>
 
 
 </head>
@@ -106,9 +101,9 @@ if(isset($_GET['page'])){
         }
 
         ?>
-    </div><!--end of sidebar-->
+    </div>
 
-</div><!--end container-->
+</div>
 
 </body>
 </html>

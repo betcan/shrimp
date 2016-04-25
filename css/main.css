@@ -1,3 +1,4 @@
+
 .banner {
     width: 95%;
     padding-top: 2%;
@@ -10,6 +11,11 @@
 }
 .banner a {
     text-decoration: none;
+}
+body {
+    font-family: Verdana;
+    font-size: 12px;
+    color: #444;
 }
 h6 {
     font-size: 50px;
@@ -51,6 +57,7 @@ footer {
     margin-left: -50px;
     margin-top: 150px;
 }
+
 img {
     width: 250px;
     height: 175px;
@@ -79,4 +86,8 @@ img {
 .loggout {
     text-decoration: none;
 
+}
+.boxar{
+    margin: 20%;
+    
 }

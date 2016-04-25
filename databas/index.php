@@ -1,3 +1,27 @@
+<html>
+<meta charset="utf-8">
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="banner">
+    <a href="#"><h6>Mormors kokbok</h6> </a>
+</div>
+<center>
+    <div class="meny">
+        <nav>
+            <ul>
+                <li><a href="../index.php">Startsida</a>
+                </li>
+
+                <li><a href="../databas/index.php">Recept</a>
+                </li>
+
+                <li><a href="../varukorg/index.php">Min kyl</a>
+                </li>
+</body>
+</html>
+
 <?php
 
 //Variabler för databaskoppling
@@ -28,6 +52,7 @@ $results = $STH->fetchAll();
 
 <!DOCTYPE html>
 <html>
+<div class="boxar">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
@@ -37,12 +62,12 @@ $results = $STH->fetchAll();
     foreach($results as $product){
         ?>
         <a href="produkt.php?produktid=<?php echo $product["id"]; ?>">
-            <img src="<?php echo $product["bildfil"]?>" height="100" width="100">
+            <img src="<?php echo $product["bildfil"]?>" height="50" width="50">
             <?php echo $product["titel"]; ?></a><br>
         <?php
     }
 ?>
 
-
+</div>
 </body>
 </html>

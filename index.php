@@ -18,19 +18,10 @@
                 <li><a href="index.php">Startsida</a>
                 </li>
 
-                <li><a href="#">Recept</a>
-                </li>
-
-                <li><a href="#">Mer recept</a>
-                </li>
-
-                <li><a href="#">Mat</a>
+                <li><a href="databas/index.php">Recept</a>
                 </li>
 
                 <li><a href="varukorg/index.php">Min kyl</a>
-                </li>
-
-                <li><a href="#">knapp3</a>
                 </li>
                 <?php
                 session_start();
@@ -90,8 +81,8 @@
 
 
 
-</body>
-</html>
+
+
             </ul>
         </nav>
 </center>
