@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title> How To Create A Database Search With MySQL & PHP Script | Tutorial.World.Edu </title>
+    <title> Mormorskokbok</title>
 </head>
 <body>
 <form action="../db/connect.php" method="post">

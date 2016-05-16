@@ -1,8 +1,4 @@
 <?php
-/**
- * Created by Michael Ranstrand
- * Date: 2015-03-06
- */
 //Variabler för databaskoppling
 $dbhost     = "localhost";
 $dbname     = "te2l";
